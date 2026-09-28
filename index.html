@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Lokw_BonQoRr81Ua2bPlHkENXWG1rBJmWR6WXV9f8IQ" />
+    <title>Monseej Purkayastha - AI/ML Researcher</title>
+    <meta name="description" content="Monseej Purkayastha - AI/ML researcher working on multimodal learning, 3D computer vision, generative models, and reliable machine learning">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta property="og:title" content="Monseej Purkayastha - AI/ML Researcher">
+    <meta property="og:description" content="Research in multimodal learning, 3D computer vision, generative models, and reliable machine learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/monseej.jpg">
+    
+    <style type="text/css">
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --text-light: #7f8c8d;
+            --background: #ffffff;
+            --background-light: #f8f9fa;
+            --border-color: #e9ecef;
+            --shadow: 0 2px 10px rgba(0,0,0,0.08);
+            --shadow-hover: 0 4px 20px rgba(0,0,0,0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--background);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--background) 0%, var(--background-light) 100%);
+            padding: 50px 0 35px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(52, 152, 219, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+            position: relative;
+            animation: fadeInUp 0.4s ease-out;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 25px;
+            position: relative;
+            animation: fadeInUp 0.4s ease-out 0.05s both;
+        }
+
+        .tagline::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-color), transparent);
+            margin: 10px auto 0;
+            animation: slideIn 0.4s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                width: 0;
+            }
+            to {
+                width: 60px;
+            }
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.5s ease-out 0.2s both;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 25px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.95rem;
+            position: relative;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--accent-color), #2980b9);
+            border-radius: 25px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .nav-link:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+        }
+
+        .nav-link:hover::before {
+            opacity: 1;
+        }
+
+        .nav-link:hover i {
+            transform: scale(1.1);
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.5s ease-out 0.3s both;
+        }
+
+        .social-link {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 12px 22px;
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.4s ease;
+        }
+
+        .social-link:hover::before {
+            left: 100%;
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .social-link:hover i {
+            transform: scale(1.1);
+        }
+
+        /* Icon Styles */
+        .nav-link i, .social-link i {
+            margin-right: 8px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .social-link i {
+            margin-right: 10px;
+            transition: all 0.4s ease;
+            opacity: 0.8;
+        }
+
+        /* Colorful Social Icons - Brand Colors */
+        .social-link .fa-envelope {
+            color: #ea4335;
+        }
+        
+        .social-link .fa-graduation-cap {
+            color: #4285f4;
+        }
+        
+        .social-link .fa-github {
+            color: #333;
+        }
+        
+        .social-link .fa-linkedin {
+            color: #0077b5;
+        }
+        
+        .social-link .fa-twitter {
+            color: #1da1f2;
+        }
+        
+        .social-link .fa-file-pdf {
+            color: #dc3545;
+        }
+
+        /* Enhanced hover effects for social icons */
+        .social-link:hover i {
+            opacity: 1;
+            filter: brightness(1.1);
+            transform: scale(1.1);
+        }
+
+        /* Keep social link text subtle while icons are colorful */
+        .social-link {
+            color: #6b7280;
+        }
+
+        .social-link:hover {
+            color: white;
+        }
+
+        /* Floating Animation for Icons */
+        .nav-link i {
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .nav-link:nth-child(1) i { animation-delay: 0s; }
+        .nav-link:nth-child(2) i { animation-delay: 0.1s; }
+        .nav-link:nth-child(3) i { animation-delay: 0.2s; }
+        .nav-link:nth-child(4) i { animation-delay: 0.3s; }
+        .nav-link:nth-child(5) i { animation-delay: 0.4s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .profile-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            align-items: start;
+            margin-bottom: 60px;
+        }
+
+        .profile-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .profile-text p {
+            margin-bottom: 20px;
+        }
+
+        .profile-text a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .profile-text a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-image {
+            text-align: center;
+        }
+
+        .profile-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        /* Research Section */
+        .research-section {
+            background: var(--background-light);
+            padding: 50px 0;
+            margin: 60px 0;
+            border-radius: 10px;
+        }
+
+        .research-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        /* Experience Sections */
+        .experience-overview {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 230px;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .experience-group h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .teaching-experience {
+            text-align: right;
+        }
+
+        .teaching-experience .experience-logo {
+            align-items: flex-end;
+        }
+
+        .experience-logos {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .experience-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .experience-logo img {
+            height: 80px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+        }
+
+        .experience-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-color);
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            text-align: center;
+        }
+
+        .experience-logo:hover .experience-text {
+            opacity: 1;
+        }
+
+        /* Publications */
+        .publication {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 25px;
+            margin-bottom: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .publication:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .publication.no-image {
+            grid-template-columns: 1fr;
+        }
+
+        #publications .publication {
+            align-items: center;
+        }
+
+        /* Fit four experience logos on one row */
+        .experience-logos {
+            gap: 36px;
+        }
+
+        .experience-logo img {
+            height: 56px;
+            max-width: 140px;
+        }
+
+        .publication-image img {
+            width: 100%;
+            max-height: 180px;
+            object-fit: contain;
+            border-radius: 6px;
+            /* background: var(--background-light); */
+        }
+
+        .publication-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .publication-content h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .publication-content h3 a:hover {
+            color: var(--accent-color);
+        }
+
+        .authors {
+            color: var(--text-light);
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .venue {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .award {
+            color: #e74c3c;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+        }
+
+        .thesis-committee {
+            color: var(--text-light);
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .oral {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+
+        .description {
+            margin-bottom: 12px;
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+
+        .paper-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .paper-link {
+            padding: 4px 10px;
+            background: var(--background-light);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .paper-link:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .name {
+                font-size: 2.5rem;
+                letter-spacing: -0.5px;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .profile-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .experience-overview {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .experience-logos {
+                justify-content: center;
+            }
+
+            .teaching-experience {
+                text-align: center;
+            }
+
+            .teaching-experience .experience-logo {
+                align-items: center;
+            }
+            
+            .publication {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .publication-image img {
+                max-height: 120px;
+                object-fit: contain;
+            }
+            
+            .nav-links {
+                gap: 12px;
+                margin-bottom: 25px;
+            }
+            
+            .nav-link {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .social-links {
+                gap: 14px;
+                margin-top: 25px;
+            }
+            
+            .social-link {
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+            
+            .header {
+                padding: 60px 0 40px;
+            }
+
+            .experience-logos {
+                gap: 40px;
+                margin-top: 25px;
+                justify-content: center;
+            }
+
+            .experience-logo img {
+                height: 60px;
+                max-width: 140px;
+            }
+        }
+
+        /* Abstract and BibTeX styles */
+        .abstract {
+            background: var(--background-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-style: italic;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        .bib {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.8rem;
+            border-left: 3px solid var(--accent-color);
+            overflow-x: auto;
+        }
+
+        /* News Section */
+        .news-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 20px 0;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .news-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .news-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 180px; /* Height for approximately 3 items */
+            overflow-y: auto;
+            border-radius: 6px;
+            border: 1px solid rgba(52, 152, 219, 0.1);
+            padding: 10px;
+        }
+
+        /* Custom scrollbar styling */
+        .news-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .news-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        .news-list::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 3px;
+        }
+
+        .news-list::-webkit-scrollbar-thumb:hover {
+            background: #2980b9;
+        }
+
+        .news-item {
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+            font-size: 0.9rem;
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            gap: 0;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .news-item:first-child {
+            padding-top: 0;
+        }
+
+        .news-date {
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-right: 10px;
+            min-width: 80px;
+            flex-shrink: 0;
+        }
+
+        .news-text {
+            color: var(--text-color);
+            flex: 1;
+        }
+
+        .news-icon {
+            /* color: var(--accent-color); */
+            margin-right: 10px;
+            font-size: 1.1em;
+            vertical-align: middle;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-color), #2980b9);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-to-top:hover {
+            background: linear-gradient(135deg, #2980b9, var(--accent-color));
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        .scroll-to-top:active {
+            transform: translateY(-1px);
+        }
+
+        .scroll-to-top i {
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-to-top:hover i {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments for mobile */
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Job Market Notification Bar */
+        .job-market-notification {
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            color: white;
+            text-align: center;
+            padding: 12px 18px;
+            cursor: pointer;
+            position: relative;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            animation: gradientShift 4s ease infinite;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+            max-width: 100%;
+        }
+
+        .job-market-notification::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s linear infinite;
+            transform: rotate(45deg);
+        }
+
+        .job-market-notification::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255,255,255,0.05) 20%, 
+                rgba(255,255,255,0.1) 50%, 
+                rgba(255,255,255,0.05) 80%, 
+                transparent 100%);
+            animation: wave 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .job-market-notification:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            animation-duration: 2s;
+        }
+
+        .job-market-notification i {
+            margin-right: 8px;
+            animation: gentlePulse 2s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        .job-market-notification span {
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        @keyframes gentlePulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+
+        /* Toast notification for feedback */
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @media (max-width: 768px) {
+            .job-market-notification {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+                margin-bottom: 18px;
+            }
+
+            .toast {
+                top: 10px;
+                right: 10px;
+                left: 10px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Google Analytics */
+    </style>
+    
+    <script>
+        // Function to copy email to clipboard and show feedback
+        function copyEmail() {
+            const email = 'purkayasthamonseej@gmail.com';
+            
+            // Try to use the modern clipboard API
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).then(function() {
+                    showToast('Email copied to clipboard!');
+                }).catch(function(err) {
+                    // Fallback for older browsers
+                    fallbackCopyText(email);
+                });
+            } else {
+                // Fallback for older browsers
+                fallbackCopyText(email);
+            }
+        }
+        
+        // Fallback method for copying text
+        function fallbackCopyText(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showToast('Email copied to clipboard!');
+            } catch (err) {
+                showToast('Failed to copy email. Please copy manually: ' + text);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+        
+        // Function to show toast notification
+        function showToast(message) {
+            // Remove any existing toast
+            const existingToast = document.querySelector('.toast');
+            if (existingToast) {
+                existingToast.remove();
+            }
+            
+            // Create new toast
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            // Show toast with animation
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            
+            // Hide toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="name">Monseej Purkayastha</h1>
+            <p class="tagline">AI/ML Researcher • Multimodal Learning, 3D Vision &amp; Reliable ML</p>
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i>About</a></li>
+                <li><a href="#research" class="nav-link"><i class="fas fa-microscope"></i>Research</a></li>
+                <li><a href="#publications" class="nav-link"><i class="fas fa-file-alt"></i>Publications</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-code"></i>Projects</a></li>
+            </ul>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="mailto:purkayasthamonseej@gmail.com" class="social-link"><i class="fas fa-envelope"></i>Email</a>
+                <a href="https://scholar.google.com/citations?user=AkYYCKcAAAAJ" class="social-link"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
+                <a href="https://github.com/humma-humma" class="social-link"><i class="fab fa-github"></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/monseej-dsguy/" class="social-link"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="https://drive.google.com/file/d/1KZRUI22PDKnNhEP-vvzzX-K_20lLG2_d/view?usp=drive_link" class="social-link"><i class="fas fa-file-pdf"></i>CV</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- About Section -->
+            <section id="about" class="profile-section">
+                <div class="profile-text">
+                    <!-- Job Market Notification Bar -->
+                    <div class="job-market-notification" onclick="copyEmail()" title="Click to copy email address" style="margin-bottom: 20px; border-radius: 12px;">
+                        <i class="fas fa-briefcase"></i>
+                        <span>I am currently looking for PhD oppotunities. Feel free to connect!</span>
+                    </div>
+                    <p>I am an M.Sc. student in Computer Science at <strong>Saarland University</strong>, working across multimodal learning, generative models, 3D vision, and reliable machine learning. Broadly, I am interested in how learning systems represent and combine information when observations are incomplete, heterogeneous, or shifted.</p>
+
+                    <p>At <a href="https://cispa.de/">CISPA</a>, I work with Dr. <a href="https://www.krikamol.org/">Krikamol Muandet</a> on off-policy evaluation under limited observational support. My master's thesis at <a href="https://www.dfki.de/">DFKI</a>, advised by Prof. Dr.-Ing. <a href="https://graphics.cg.uni-saarland.de/people/slusallek.html">Philipp Slusallek</a>, produced <strong>VISTA</strong>, a text- and video-conditioned diffusion model for stylized 3D human motion, published as a first-author extended abstract at the Multimodal Human Motion Analysis Workshop at CVPR 2026.</p>
+
+                    <p>I hold a B.Tech. in Electronics and Communication Engineering from NIT Silchar. I then spent 3.5 years as a data engineer at CGI before moving to Germany, where I worked on applied machine learning at Fraunhofer IZFP alongside my master's.</p>
+
+                </div>
+
+                <div class="profile-image">
+                    <img src="assets/monseej.jpg" alt="Monseej Purkayastha">
+                </div>
+
+                <div class="experience-overview">
+                    <div class="experience-group work-experience">
+                        <h3>Work Experience</h3>
+                        <div class="experience-logos">
+                            <div class="experience-logo">
+                                <img src="assets/cispa_logo.svg" alt="CISPA" title="CISPA Helmholtz Center for Information Security - Student Researcher (2025-present)">
+                            </div>
+                            <div class="experience-logo">
+                                <img src="assets/dfki_logo.png" alt="DFKI" title="DFKI - Master Thesis (2025-2026)">
+                            </div>
+                            <div class="experience-logo">
+                                <img src="assets/izfp_logo.gif" alt="Fraunhofer IZFP" title="Fraunhofer IZFP - ML Engineer (2023-2025)">
+                            </div>
+                            <div class="experience-logo">
+                                <img src="assets/cgi_logo.png" alt="CGI" title="CGI - Data Engineer (2019-2023)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-group teaching-experience">
+                        <h3>Teaching Experience</h3>
+                        <div class="experience-logo">
+                            <a href="https://www.uni-saarland.de/en/home.html" aria-label="Saarland University">
+                                <img src="assets/saarland_university_logo_cropped.png" alt="Universität des Saarlandes">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent News Section -->
+            <section id="news" class="news-section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <i class="fas fa-newspaper news-icon"></i>
+                        Recent News
+                    </h2>
+                    <div class="news-content">
+                        <ul class="news-list">
+                            <li class="news-item">
+                                <span class="news-date">2026:</span>
+                                <span class="news-text">🎉 First-author paper <a href="https://arxiv.org/abs/2609.23817">VISTA</a> accepted at the <a href="https://hri.iit.it/cvpr2026-workshop">MOMA Workshop, CVPR 2026</a></span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-date">Oct 2025:</span>
+                                <span class="news-text">💼 Joined CISPA as a student researcher with Dr. Krikamol Muandet</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-date">May 2025:</span>
+                                <span class="news-text">🔬 Started my master's thesis at DFKI on stylized 3D human motion synthesis</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-date">Oct 2024:</span>
+                                <span class="news-text">🎤 Teaching assistant for Neural Networks: Theory and Implementation and Statistical NLP at Saarland University</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-date">Oct 2023:</span>
+                                <span class="news-text">💼 Joined Fraunhofer IZFP as a part-time ML engineer</span>
+                            </li>
+                            <li class="news-item">
+                                <span class="news-date">Apr 2023:</span>
+                                <span class="news-text">🎓 Started my M.Sc. in Computer Science at Saarland University</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Section -->
+            <section id="research" class="research-section">
+                <div class="container">
+                    <h2 class="section-title">Research</h2>
+                    <div class="research-content">
+                        <p>My research interests lie in <strong>3D/4D vision, representation learning, generative modelling, and reliable inference for structured and multimodal data</strong>. I am especially interested in human-object and human-scene interaction, generative priors for reconstruction, uncertainty under occlusion, and learning in low- and missing-data regimes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications">
+                <h2 class="section-title">Publications</h2>
+
+                <article class="publication">
+                    <div class="publication-image">
+                        <a href="https://arxiv.org/abs/2609.23817">
+                            <img src="assets/vista_teaser.jpg" alt="VISTA: text prompt and Superman style video in, stylized walking-in-a-circle motion out">
+                        </a>
+                    </div>
+                    <div class="publication-content">
+                        <h3><a href="https://arxiv.org/abs/2609.23817">VISTA: Video-Injected Stylized Text-to-Animation</a> <strong>[Master thesis]</strong></h3>
+                        <div class="authors"><strong>Monseej Purkayastha</strong>, Anindita Ghosh, Philipp Slusallek</div>
+                        <div class="venue">Multimodal Human Motion Analysis Workshop at CVPR (MOMA), CVPR 2026</div>
+                        <div class="description">A multimodal diffusion model that combines CLIP text conditioning with ViViT video conditioning for stylized 3D human motion generation. VISTA outperforms the prior video-conditioned method SMooDi (77.8% vs. 68.1% style recognition accuracy, 2x lower FID) and reaches 70% zero-shot style accuracy in text-video style transfer.</div>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2609.23817" class="paper-link">Paper</a>
+                            <a href="https://hri.iit.it/cvpr2026-workshop" class="paper-link">Workshop</a>
+                            <a href="https://drive.google.com/file/d/1HlU7zq4_leKMiRbjGJlHievNHrqDoI8x/view?usp=sharing" class="paper-link">Workshop Slides</a>
+                            <a href="https://drive.google.com/file/d/1vP3VjzPJLbzrJP2qPe_otsvdR_3zZmwQ/view?usp=sharing" class="paper-link">Thesis</a>
+                            <a href="https://github.com/humma-humma/VISTA" class="paper-link">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publication">
+                    <div class="publication-image">
+                        <a href="https://doi.org/10.1007/978-3-031-39811-7_12">
+                            <img src="assets/hostility_dataflow.svg" alt="Hostility Detection Data Flow Diagram">
+                        </a>
+                    </div>
+                    <div class="publication-content">
+                        <h3><a href="https://doi.org/10.1007/978-3-031-39811-7_12">An Ensemble Approach to Hostility Detection in Hindi Tweets</a></h3>
+                        <div class="authors">Santosh Rajak, <strong>Monseej Purkayastha</strong>, Amitabh Deb, Ujwala Baruah</div>
+                        <div class="venue">ICCCSP 2023, Springer</div>
+                        <div class="description">A two-stage pipeline for detecting hostile posts in Hindi (Devanagari) tweets. A Hinglish BERT-based binary classifier first flags hostile content, then soft-voting ensembles (SVM, Random Forest, Logistic Regression, Gradient Boosted Trees, XGBoost) on pretrained Hindi FastText embeddings assign fake, hate, defamation and offensive labels, reaching F1-scores of 80% (fake), 79% (offensive), 76% (defamation) and 69% (hate) on the test set.</div>
+                        <div class="paper-links">
+                            <a href="https://doi.org/10.1007/978-3-031-39811-7_12" class="paper-link">Paper</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2 class="section-title">Projects</h2>
+
+                <article class="publication">
+                    <div class="publication-image">
+                        <a href="https://github.com/humma-humma/persistent-3d-memory-vla">
+                            <img src="assets/proj_3d_memory_vla.jpg" alt="Three RoboCasa camera views, one occluded, fused into a persistent world-frame 3D memory of the kitchen">
+                        </a>
+                    </div>
+                    <div class="publication-content">
+                        <h3><a href="https://github.com/humma-humma/persistent-3d-memory-vla">Persistent 3D Scene Memory for Vision-Language-Action Policies</a></h3>
+                        <div class="description">A confidence-aware, world-aligned 3D memory and geometry-token adapter for SmolVLA, integrating three-camera RGB, proprioception, and native 12D control in RoboCasa, fine-tuned on 42K+ demonstration actions. Reduced held-out imitation RMSE by 33.7% versus zero action and improved action error by 14.9% over ungated persistent geometry across 480 controlled occlusion and scene-change trials.</div>
+                        <div class="paper-links">
+                            <a href="https://github.com/humma-humma/persistent-3d-memory-vla" class="paper-link">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Hidden projects (kept for later): Video MLOps, Expense Intelligence, Urban Scene Segmentation
+                <article class="publication">
+                    <div class="publication-image">
+                        <a href="https://github.com/humma-humma/video-mlops-platform">
+                            <img src="assets/proj_video_mlops.jpg" alt="Video MLOps Teaser">
+                        </a>
+                    </div>
+                    <div class="publication-content">
+                        <h3><a href="https://github.com/humma-humma/video-mlops-platform">Video MLOps: Production GPU Inference &amp; Lifecycle Platform</a></h3>
+                        <div class="description">An end-to-end video AI platform with SmolVLM2/Whisper, asynchronous FastAPI-Celery inference, PostgreSQL/Valkey, S3-compatible artifacts, Docker, and GPU benchmarking, designed to include MLflow experiment tracking, dataset/model lineage, evaluation-gated CI/CD, and pgvector-based video retrieval with timestamped citations.</div>
+                        <div class="paper-links">
+                            <a href="https://github.com/humma-humma/video-mlops-platform" class="paper-link">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publication">
+                    <div class="publication-image">
+                        <a href="https://github.com/humma-humma/expense-intelligence-platform-portfolio">
+                            <img src="assets/proj_expense.jpg" alt="Expense Intelligence Platform Teaser">
+                        </a>
+                    </div>
+                    <div class="publication-content">
+                        <h3><a href="https://github.com/humma-humma/expense-intelligence-platform-portfolio">Expense Intelligence Platform</a></h3>
+                        <div class="description">A German receipt intelligence platform using FastAPI, Celery, PostgreSQL/pgvector, Redis, S3, and AWS Textract. It combines asynchronous OCR ingestion, evidence-traceable normalization and expense analytics with hybrid RAG, grounded citations, tool-routed agentic workflows, and human-approved actions.</div>
+                        <div class="paper-links">
+                            <a href="https://github.com/humma-humma/expense-intelligence-platform-portfolio" class="paper-link">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publication no-image">
+                    <div class="publication-content">
+                        <h3>Urban Scene Segmentation with Adverse Weather Conditions</h3>
+                        <div class="description">Investigated domain-shift robustness in semantic segmentation models via a self-supervised continual learning pipeline on Foggy/Snow Cityscapes, identifying augmentation strategies that yield +3% mIoU over the baseline.</div>
+                    </div>
+                </article>
+                -->
+
+                <article class="publication">
+                    <div class="publication-image">
+                        <a href="https://github.com/humma-humma/sfm_recon">
+                            <img src="assets/proj_sfm.jpg" alt="Gaussian splats of a boot and a milk carton, and an RGB-D SLAM pose-graph reconstruction of a building exterior">
+                        </a>
+                    </div>
+                    <div class="publication-content">
+                        <h3><a href="https://github.com/humma-humma/sfm_recon">3D Reconstruction: Incremental SfM &amp; RGB-D SLAM</a></h3>
+                        <div class="description">A multi-view SfM pipeline using SIFT/AKAZE matching, PnP registration, and bundle adjustment with sub-pixel reprojection accuracy across up to 51 cameras, extended to RGB-D SLAM with learned-frontend loop closure using SuperPoint+LightGlue.</div>
+                        <div class="paper-links">
+                            <a href="https://github.com/humma-humma/sfm_recon" class="paper-link">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publication">
+                    <div class="publication-image">
+                        <a href="https://tinyurl.com/mukzwfv9">
+                            <img src="assets/proj_cold_diffusion.jpg" alt="Cold Diffusion: an image blurred step by step, and TACoS sampling restoring a blurred MNIST digit where naive sampling fails">
+                        </a>
+                    </div>
+                    <div class="publication-content">
+                        <h3><a href="https://tinyurl.com/mukzwfv9">Reimplementation of Cold Diffusion (Bansal et al., NeurIPS 2023)</a></h3>
+                        <div class="description">Reimplemented and reproduced the paper's core results end-to-end in PyTorch, with a tutorial notebook exploring how replacing Gaussian noise with arbitrary degradations challenges core assumptions of standard DDPM.</div>
+                        <div class="paper-links">
+                            <a href="https://tinyurl.com/mukzwfv9" class="paper-link">Code</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 40px 0; color: var(--text-light); font-size: 0.85rem;">
+        <div class="container">
+            <p style="margin-top: 15px;">© 2026 Monseej Purkayastha. All rights reserved.</p>
+            <p style="margin-top: 8px;">Based on the <a href="https://github.com/sha2nkt/sha2nkt.github.io">original repository</a> created by <a href="https://github.com/sha2nkt">Shashank Tripathi</a>.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>
